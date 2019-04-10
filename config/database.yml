@@ -86,7 +86,6 @@ production:
   sslmode: require
   checkout_timeout: 20
   host: <%= ENV['DB_HOST']%>
-  database: <%= ENV['DB_NAME']%>
   username: <%= ENV['DB_USER']%>
   password: <%= ENV['POSTGRES_PW']%>
   min_messages: warning
