@@ -85,7 +85,8 @@ production:
   reaping_frequency: 50
   sslmode: require
   checkout_timeout: 20
-  host: <%= ENV['DB_HOST']%>
+  database: ebdb
   username: <%= ENV['DB_USER']%>
   password: <%= ENV['POSTGRES_PW']%>
+  host: <%= ENV['DB_HOST']%>
   min_messages: warning
