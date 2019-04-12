@@ -26,7 +26,9 @@
 Rails.application.config.content_security_policy do |policy|
   if Rails.env.development?
     policy.script_src :self, :https, :unsafe_eval
-  else
-    policy.script_src :self, :https
   end
+  # https://stackoverflow.com/questions/50957238/vue-js-app-works-in-development-but-not-mounting-template-in-production-with-rai
+  # else
+  #   policy.script_src :self, :https
+  # end
 end

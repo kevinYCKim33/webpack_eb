@@ -72,15 +72,27 @@
 //   });
 // })
 
-import Vue from 'vue';
-import App from '../app.vue';
+import Vue from 'vue/dist/vue.esm'
 import TurbolinksAdapter from 'vue-turbolinks'
+// import App from '../app.vue';
 
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
-  new Vue({
-    el: '#app',
-    render: h => h(App),
+  console.log('at least turbolinks loads')
+  var element = document.querySelector("#app-6")
+
+  const app = new Vue({
+    el: element,
+    data: {
+      message: 'Hello Vue!'
+    }
   });
 })
+
+// document.addEventListener('turbolinks:load', () => {
+//   new Vue({
+//     el: '#app',
+//     render: h => h(App),
+//   });
+// })
