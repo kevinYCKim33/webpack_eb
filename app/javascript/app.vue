@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
