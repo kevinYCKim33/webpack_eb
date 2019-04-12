@@ -54,20 +54,33 @@
 //
 // Then uncomment the code block below:
 //
-import Vue from 'vue/dist/vue.esm'
+// import Vue from 'vue/dist/vue.esm'
+// import TurbolinksAdapter from 'vue-turbolinks'
+// // import App from '../app.vue'
+//
+// Vue.use(TurbolinksAdapter)
+//
+// document.addEventListener('turbolinks:load', () => {
+//   console.log('at least turbolinks loads')
+//   var element = document.querySelector("#app-6")
+//
+//   const app = new Vue({
+//     el: element,
+//     data: {
+//       message: 'Hello Vue!'
+//     }
+//   });
+// })
+
+import Vue from 'vue';
+import App from '../app.vue';
 import TurbolinksAdapter from 'vue-turbolinks'
-// import App from '../app.vue'
 
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
-  console.log('at least turbolinks loads')
-  var element = document.querySelector("#app-6")
-
-  const app = new Vue({
-    el: element,
-    data: {
-      message: 'Hello Vue!'
-    }
+  new Vue({
+    el: '#app',
+    render: h => h(App),
   });
 })
