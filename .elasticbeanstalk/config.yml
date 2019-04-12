@@ -3,7 +3,11 @@ branch-defaults:
     environment: null
     group_suffix: null
   master:
-    environment: webpack-again-dev
+    environment: kevin-webpack-test
+environment-defaults:
+  kevin-webpack-test:
+    branch: null
+    repository: null
 global:
   application_name: webpack_again
   branch: null
